@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, td {
+          border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="miTabla">
+      <tr>
+        <td>1-1</td>
+        <td>1-2</td>
+      </tr>
+      <tr>
+        <td>2-1</td>
+        <td>2-2</td>
+      </tr>
+      <tr>
+        <td>3-1</td>
+        <td>3-2</td>
+      </tr>
+    </table>
+    <script>
+      function anadirFila(posicion) {
+          var tabla = document.getElementById("miTabla");
+          var row = tabla.insertRow(posicion);
+          var numCelda = 0;
+          for (var i = 0; i < tabla.rows[0].cells.length; i++) {
+            let cell = row.insertCell(i);
+            cell.innerHTML = numCelda;
+            numCelda++;
+          }
+      }
+      anadirFila(2);
+    </script>
+  </body>
+</html>

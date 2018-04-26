@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <input type="text" id="input">
+    <button onclick="anadirLi()">Enviar</button>
+    <ul id="elementoUl">
+      <li>Cabecera</li>
+    </ul>
+    <script>
+      function anadirLi(){
+        var ul = document.getElementById("elementoUl");
+        var textoInput=document.getElementById('input').value;
+        var li = document.createElement("li");
+        var valorLi = document.createTextNode(textoInput);
+        li.appendChild(valorLi);
+        ul.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

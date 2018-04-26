@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, td {
+          border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="miTabla">
+      <tr>
+        <td>1-1</td>
+        <td>1-2</td>
+      </tr>
+      <tr>
+        <td>2-1</td>
+        <td>2-2</td>
+      </tr>
+      <tr>
+        <td>3-1</td>
+        <td>3-2</td>
+      </tr>
+    </table>
+    <script>
+      function actualizarTabla(fila,columna,texto){
+        var tabla = document.getElementById("miTabla");
+        tabla.rows[fila].cells[columna].innerHTML = texto;
+      }
+      actualizarTabla(1,1,"hola");
+    </script>
+  </body>
+</html>
