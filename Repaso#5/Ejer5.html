@@ -26,8 +26,13 @@
     </style>
   </head>
   <body>
+    <form>
+      Quieres un dropdown o un radio button list?<br>
+      <input type="radio" name="colors" id="red">Dropdown<br>
+      <input type="radio" name="colors" id="blue">Radio
+    </form>
+    <button onclick="check()">Crear</button>
       <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Menu desplegable</button>
         <div id="myDropdown" class="dropdown-content">
           <a href="#home">Inicio</a>
           <a href="#about">Galeria</a>
@@ -36,14 +41,18 @@
       </div>
 
       <script>
-
+        function check() {
+          if (document.getElementById("red").checked == true){
+            myFunction();
+          }else{
+            ;
+          }
+        }
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
 
         window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
             for (i = 0; i < dropdowns.length; i++) {
@@ -53,7 +62,7 @@
               }
             }
           }
-        }
+
       </script>
 
     </body>
